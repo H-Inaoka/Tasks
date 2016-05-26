@@ -1,0 +1,31 @@
+{
+    "name": "netcommons/tasks",
+    "description": "Tasks Plugin for NetCommons",
+    "type":        "cakephp-plugin",
+    "keywords":    ["cakephp", "tasks"],
+    "homepage":    "http://www.netcommons.org/",
+    "license":     "NetCommons License",
+    "authors": [
+        {
+            "name":     "NetCommons Community",
+            "homepage": "https://github.com/NetCommons3/Frames/tasks/contributors"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "app/Plugin/{$name}": ["type:cakephp-plugin"]
+        }
+    },
+    "require": {
+        "cakedc/migrations":            "~2.2",
+        "netcommons/files":             "dev-master",
+        "netcommons/m17n":              "dev-master",
+        "netcommons/net-commons":       "dev-master",
+        "netcommons/rooms":             "dev-master",
+        "netcommons/user-attributes":   "dev-master",
+        "netcommons/users":             "dev-master"
+    },
+    "config": {
+        "vendor-dir": "vendors"
+    }
+}
