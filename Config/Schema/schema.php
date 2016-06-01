@@ -41,11 +41,11 @@ class TasksSchema extends CakeSchema {
  *
  * @var array
  */
-public $tasks = array(
-		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary', 'comment' => 'ID |  |  | '),
-		'indexes' => array(
-				'PRIMARY' => array('column' => 'id', 'unique' => 1)
-		),
-		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
-);
+	public $tasks = array(
+			'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary', 'comment' => 'ID |  |  | '),
+			'indexes' => array(
+					'PRIMARY' => array('column' => 'id', 'unique' => 1)
+			),
+			'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
+	);
 }
