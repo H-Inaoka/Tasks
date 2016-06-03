@@ -15,6 +15,34 @@ msgstr ""
 "X-Generator: Poedit 1.7.5\n"
 "Language: ja\n"
 
+# ToDo一覧画面で使用
+msgid "Incomplete task"
+msgstr "未完了のToDo"
+
+# ToDo一覧画面で使用
+msgid "Completed task"
+msgstr "完了したToDo"
+
+# ToDo一覧画面で使用
+msgid "All task"
+msgstr "全てのToDo"
+
+# ToDo一覧画面で使用
+msgid "Categories ALL"
+msgstr "全てのカテゴリ"
+
+# ToDo一覧画面で使用
+msgid "Categories list"
+msgstr "カテゴリ一覧"
+
+# ToDo一覧画面で使用
+msgid "Not task"
+msgstr "ToDoが一件も登録されていません。"
+
+# ToDo一覧画面で使用
+msgid "Close To Deadline"
+msgstr "期限間近"
+
 # 登録（編集）画面で使用
 msgid "Content"
 msgstr "内容"
