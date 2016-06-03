@@ -1,10 +1,6 @@
 <?php
 /**
  * TaskBlockRolePermissions Controller
- *
- * プラグイン「回覧板」を参考、参考ファイル：CircularNoticeBlockRolePermissionsController.php
- *
- * ToDo: 現状 … 右側のメニューおよび上部の編集終了ボタンなどが表示されない、Notice表示により権限設定等が表示されない、メール設定への遷移は可能
  */
 
 App::uses('TasksAppController', 'Tasks.Controller');
@@ -17,7 +13,7 @@ class TaskBlockRolePermissionsController extends TasksAppController {
  *
  * @var array
  */
-	public $layout = 'NetCommons.setting';	// ToDo 要設定（単純にコメントアウトするとエラー「Missing Layout」が表示される
+	public $layout = 'NetCommons.setting';
 
 /**
  * use models
@@ -25,7 +21,7 @@ class TaskBlockRolePermissionsController extends TasksAppController {
  * @var array
  */
 	public $uses = array(
-
+		'Blocks.Block',
 	);
 
 /**
@@ -34,7 +30,12 @@ class TaskBlockRolePermissionsController extends TasksAppController {
  * @var array
  */
 	public $components = array(
-		
+		'NetCommons.Permission' => array(
+			//アクセスの権限
+			'allow' => array(
+				'edit' => 'block_permission_editable',
+			),
+		),
 	);
 
 /**
@@ -55,6 +56,28 @@ class TaskBlockRolePermissionsController extends TasksAppController {
  * @return void
  */
 	public function edit() {
+
+		$permissions = $this->Workflow->getBlockRolePermissions(
+			array(
+				'content_creatable',
+				'content_publishable',
+				'content_comment_creatable',
+				'content_comment_publishable',
+				'content_category_creatable',
+				'content_category_publishable',
+			)
+		);
+		$this->set('roles', $permissions['Roles']);
+
+		if ($this->request->is(array('post', 'put'))) {
+			$this->request->data['TaskRolePermission'] = Hash::merge(
+				$permissions['BlockRolePermissions'],
+				$this->request->data['BlockRolePermission']
+			);
+		} else {
+			$this->request->data['BlockRolePermission'] = $permissions['BlockRolePermissions'];
+			$this->request->data['Frame'] = Current::read('Frame');
+		}
 
 	}
 }

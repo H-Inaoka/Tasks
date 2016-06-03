@@ -46,3 +46,15 @@ msgstr "期限間近"
 # 登録（編集）画面で使用
 msgid "Content"
 msgstr "内容"
+
+# ToDoプラグイン設定画面（権限設定）で使用
+msgid "Content creatable roles"
+msgstr "ToDoを作成・編集できる権限"
+
+# ToDoプラグイン設定画面（権限設定）で使用
+msgid "Content comment creatable roles"
+msgstr "コメントを投稿できる権限"
+
+# ToDoプラグイン設定画面（権限設定）で使用
+msgid "Content category creatable roles"
+msgstr "カテゴリを作成・編集できる権限"

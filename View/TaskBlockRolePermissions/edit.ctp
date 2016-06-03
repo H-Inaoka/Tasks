@@ -1,8 +1,6 @@
 <?php
-/*
+/**
  * 権限設定 template
- *
- * プラグイン「回覧板」を参考、参考ファイル：CircularNoticeBlockRolePermissions/edit.ctp
  */
 ?>
 
@@ -12,10 +10,10 @@
 	<div class="tab-content">
 
 		<?php echo $this->element('Blocks.edit_form', array(
-//			'model' => 'CircularNoticeFrameSetting',
-//			'callback' => 'CircularNotices.CircularNoticeBlockRolePermissions/edit_form',
-			'cancelUrl' => NetCommonsUrl::backToPageUrl(),
-		)); ?>
+			'model' => '',
+			'callback' => 'Tasks.TaskBlockRolePermissions/edit_form',
+			'cancelUrl' => NetCommonsUrl::backToPageUrl('default_setting_action'),
+			)); ?>
 
 	</div>
 
