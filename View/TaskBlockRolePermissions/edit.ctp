@@ -13,7 +13,7 @@
 			'model' => '',
 			'callback' => 'Tasks.TaskBlockRolePermissions/edit_form',
 			'cancelUrl' => NetCommonsUrl::backToPageUrl('default_setting_action'),
-			)); ?>
+		)); ?>
 
 	</div>
 

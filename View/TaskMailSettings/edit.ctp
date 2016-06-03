@@ -1,8 +1,6 @@
 <?php
-/*
+/**
  * メール設定 template
- *
- * プラグイン「回覧板」を参考、参考ファイル：CircularNoticeMailSettings/edit.ctp
  */
 ?>
 
