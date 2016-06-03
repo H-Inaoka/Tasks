@@ -20,7 +20,6 @@ class TasksAppController extends AppController {
 	 */
 	public $components = array (
 		'Pages.PageLayout',
-
 	);
 
 	/**
@@ -29,7 +28,7 @@ class TasksAppController extends AppController {
 	 * @var array
 	 */
 	public $helper = array (
-		
+		'Tasks.Category'
 	);
 
 	/**
@@ -37,14 +36,6 @@ class TasksAppController extends AppController {
 	 */
 	public function beforeFilter() {
 		parent::beforeFilter();
-		
-	}
-
-	/**
-	 * Initialize tasks
-	 */
-	public function initTask() {
-		
 	}
 
 }
